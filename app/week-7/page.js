@@ -15,7 +15,7 @@ const Page = () => {
   };
 
   const handleItemSelect = (itemName) => {
-    const cleanedItemName = itemName.replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|�[�-�]|�[�-�]|[\u2011-\u26FF]|�[�-�])/g, '').trim();
+    const cleanedItemName = itemName.replace(/🥛|🍞|🥚|🍌|🥦|🍗|🍝|🍝|🧻|🍽️|🧼/g, '').split(",")[0];
     setSelectedItemName(cleanedItemName);
   };
 

@@ -30,9 +30,8 @@ function ItemList({ items, onItemSelect }) {
       </div>
 
       <ul>
-        {sortedItems.map(item => (
-          
-          <Item key={item.id} onSelect={onItemSelect} {...item} />
+        {sortedItems.map((item,index) => (
+          <Item key={index} onSelect={onItemSelect} {...item} />
         ))}
       </ul>
     </div>

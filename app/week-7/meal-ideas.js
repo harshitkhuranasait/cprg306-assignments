@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -27,14 +29,17 @@ const MealIdeas = ({ ingredient }) => {
 
   return (
     <div>
-      <h2 className="text-xl font-semibold mb-2">Meal Ideas with {ingredient}</h2>
+      <h2 className="text-xl font-semibold mb-2">Meal Ideas {ingredient && `With ${ingredient}`}</h2>
       <ul>
+        {meals != null ?         <>
         {meals.map((meal) => (
           <li key={meal.idMeal} className="mb-2">
             <img src={meal.strMealThumb} alt={meal.strMeal} className="w-20 h-20 mr-2 rounded-full inline-block" />
             <span>{meal.strMeal}</span>
           </li>
         ))}
+        </>: <p>No meals found</p>}
+
       </ul>
     </div>
   );

@@ -56,7 +56,7 @@ function LandingPage() {
             Logout
           </button>
           <a
-            href="./week-8/shopping-list"
+            href="./week-10/shopping-list"
             className='bg-blue-500 text-white px-4 py-2 rounded mt-4 hover:bg-blue-600'
           >
             Go to Shopping List
